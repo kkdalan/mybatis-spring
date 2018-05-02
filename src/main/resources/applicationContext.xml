@@ -12,7 +12,7 @@
           http://www.springframework.org/schema/aop/spring-aop.xsd
           http://www.springframework.org/schema/context
           http://www.springframework.org/schema/context/spring-context.xsd">
-    
+          
     <context:component-scan base-package="tk.mybatis.*.service.impl"/>
 
 	<bean id="dataSource" class="org.apache.ibatis.datasource.pooled.PooledDataSource">
@@ -23,7 +23,7 @@
 	</bean>
 	
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-		<property name="configLocation" value="classpath:mybatis-servlet.xml" />
+		<property name="configLocation" value="classpath:mybatis-config.xml" />
 		<property name="dataSource" ref="dataSource" />
 		<property name="mapperLocations">
 			<array>
